@@ -3,10 +3,14 @@
 #header {
     position: relative;
     text-align: center;
-    background-image: url('../img/hero.jpg');
+    background-image: url('../img/hero-mobile.jpg');
     background-position: center top;
     background-size: cover;
     z-index: 1;
+
+    @include for-desktop {
+        background-image: url('../img/hero-desktop.jpg');
+    }
 
     &::before {
         content: '';
@@ -164,12 +168,14 @@
             content: '';
             display: block;
             position: absolute;
-            background-image: url('https://u8.filesonload.ru/s/34qce4051/dae922b126caaef4b80b514cfcea0e1b/2bd187153074fa7752a854d7247617ff.png');
+            background-image: url('../img/arrow.png');
+            background-repeat: no-repeat;
             background-size: contain;
-            width: 52px;
-            height: 82px;
-            top: 100%;
-            left: 100%;
+            width: 90px;
+            height: 36px;
+            top: 70px;
+            right: -17px;
+            transform: scale(1, -1) rotate(240deg);
 
             @include lt-desktop {
                 display: none;
@@ -179,8 +185,8 @@
 }
 
 #problem {
-    background-color: #f49fa6;
-    background-color: #ede1e1;
+    background-color: #eda0a8;
+    //background-color: #ede1e1;
     padding-bottom: 0;
 
     .container {
@@ -200,8 +206,8 @@
     .image {
         display: block;
         width: 100%;
-        max-width: 360px;
-        margin: auto 3rem 0 auto;
+        max-width: 480px;
+        margin: auto 1rem 0 auto;
     }
 
     .media-list {
@@ -210,11 +216,26 @@
 
     .lead {
         font-size: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         position: relative;
 
-        @include for-mobile {
-            text-align: center;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            background-image: url('../img/arrow.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 90px;
+            height: 36px;
+            top: 70px;
+            right: 2px;
+            transform: rotate(420deg);
+            z-index: 2;
+
+            @include lt-desktop {
+                display: none;
+            }
         }
     }
 }
@@ -233,7 +254,7 @@
 
     .background {
         position: relative;
-        background-image: url('../img/zoom-1.jpg');
+        background-image: url('../img/zoom.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
