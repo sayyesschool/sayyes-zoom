@@ -1,0 +1,16 @@
+{
+  "name": "sayes-zoom",
+  "version": "1.0.0",
+  "private": true,
+  "main": "gulpfile.js",
+  "scripts": {
+    "server": "php -S localhost:8000",
+    "sass": "gulp"
+  },
+  "devDependencies": {
+    "bulma": "^0.8.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
+}

@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'free-lesson-icons';
+    src: url('../fonts/free-lesson-icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="fa-"]:before,
+[class*=" fa-"]:before {
+    font-family: "free-lesson-icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: auto;
+}
+
+.fas.fa-check:before { content: '\e801'; }
+.fa.fa-angle-left:before { content: '\f104'; }
+.fa.fa-angle-right:before { content: '\f105'; }
+.fa.fa-phone:before { content: '\e800'; }
+.fab.fa-whatsapp:before { content: '\f232'; }
+.fa.fa-subway:before { content: '\f239'; }
