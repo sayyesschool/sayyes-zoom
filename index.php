@@ -575,8 +575,8 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         <script src="https://static.sayes.ru/js/timer.js"></script>
 
         <script>
-            var formSection = document.querySelector('#form');
-            var formElement = document.querySelector('#form form');
+            var signupSection = document.querySelector('#signup');
+            var formElement = document.querySelector('#signup form');
             var dialogElement = document.querySelector('#dialog');
             
             $('input[type=tel]').mask('+7 (999) 999-9999');
@@ -614,7 +614,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
             $('.call-to-action').on('click', function (event) {
                 event.preventDefault();
 
-                formElement.scrollIntoView({ behavior: 'smooth' });
+                signupSection.scrollIntoView({ behavior: 'smooth' });
             });
 
             $('.whatsapp-button').click(function() {
