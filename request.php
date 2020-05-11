@@ -28,7 +28,7 @@ $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 $headers .= "From: \"Школа SAY YES!\" <info@sayes.ru>\r\n";
 $headers .= "X-Mailer: E-mail from sayes website\r\n";
 
-mail('info@sayes.ru', 'Заявка на пробный урок (zoom.sayes.ru)', $message, $headers);
+mail('info@sayes.ru', 'Заявка на пробный урок онлайн в группе (zoom.sayes.ru)', $message, $headers);
 
 header('Content-Type: application/json');
 
