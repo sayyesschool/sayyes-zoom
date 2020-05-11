@@ -16,8 +16,8 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
         <title>Бесплатный пробный урок английского онлайн | SAY YES!</title>
 
-        <link rel="icon" href="./img/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" href="./img/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" href="https://static.sayes.ru/images/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" href="https://static.sayes.ru/images/favicons/favicon-192x192.png" sizes="192x192">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
         <link rel="stylesheet" href="./css/index.css">
@@ -34,7 +34,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         <header id="header" class="hero">
             <div class="hero-head">
                 <div class="container">
-                    <img class="logo" src="./img/sayyes-logo.png">
+                    <img class="logo" src="https://static.sayes.ru/images/logos/sayyes-school-chain-white.png">
 
                     <div class="buttons">
                         <a class="button phone-button is-text" href="tel:74996505347">
