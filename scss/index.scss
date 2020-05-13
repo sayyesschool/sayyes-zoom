@@ -193,8 +193,8 @@ $danger: #b92027 !default;
             width: 90px;
             height: 36px;
             top: 70px;
-            right: -17px;
-            transform: scale(1, -1) rotate(240deg);
+            right: 15px;
+            transform: rotate(120deg);
 
             @include lt-desktop {
                 display: none;
@@ -248,9 +248,9 @@ $danger: #b92027 !default;
             background-size: contain;
             width: 149px;
             height: 40px;
-            top: 89px;
-            right: 99px;
-            transform: rotate(400deg);
+            top: 57px;
+            right: 5px;
+            transform: rotate(409deg);
             z-index: 2;
 
             @include lt-desktop {
@@ -285,7 +285,7 @@ $danger: #b92027 !default;
         background-image: url('/img/zoom.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: top center;
+        background-position: top right;
 
         &::before {
             content: '';
