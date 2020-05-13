@@ -592,7 +592,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 </section>
 
                 <footer class="modal-card-foot">
-                    <a class="button is-success" href="https://wa.me/79250916416?text=Хочу%20подарок">Получить подарок</a>
+                    <a class="button is-danger" href="https://wa.me/79250916416?text=Хочу%20подарок">Получить подарок</a>
                 </footer>
             </div>
         </div>
