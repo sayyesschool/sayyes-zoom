@@ -54,7 +54,9 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
             <div class="hero-body">
                 <h1 class="typography title">Бесплатный пробный урок в онлайн-группе</h1>
 
-                <p class="typography subtitle">Заговорите на английском не выходя из дома или офиса!</p>
+                <p class="typography subtitle">Заговорите на английском не выходя из дома</p>
+
+                <p class="typography utp">по цене в 2,5 раза дешевле индивидуальных уроков</p>
 
                 <a href="#form" class="button is-large is-danger call-to-action">Записаться на бесплатный урок</a>
             </div>
@@ -62,9 +64,9 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
         <main id="content">
             <section id="present" class="section section-dark section-cta">
-                <h2 class="title">Запишитесь сейчас и получите инструкцию от коуча по произношению<br><strong class="has-text-danger">«Как быстро начать понимать речь носителя»</strong> в подарок!</h2>
+                <h2 class="title">Запишитесь сейчас и получите инструкцию от коуча по произношению<br><strong>«Как быстро начать понимать речь носителя»</strong> в подарок!</h2>
 
-                <img src="/img/emoji/wrapped-present_apple.png" alt="">
+                <img src="https://static.sayes.ru/images/emoji/wrapped-present.png" alt="">
             </section>
 
             <section id="persona" class="section has-text-centered">
@@ -81,10 +83,10 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                                 'image' => 'face-with-uneven-eyes-and-wavy-mouth.png',
                                 'text' => 'Вам стыдно "объясняться на пальцах" и неприятно осознавать ограниченность в путешествиях.'
                             ],
-                            [
-                                'image' => 'shocked-face-with-exploding-head.png',
-                                'text' => 'Вы хотели бы наслаждаться фильмами и сериалами в оригинале, но не ничего не понимаете.'
-                            ],
+                            // [
+                            //     'image' => 'shocked-face-with-exploding-head.png',
+                            //     'text' => 'Вы хотели бы наслаждаться фильмами и сериалами в оригинале, но не ничего не понимаете.'
+                            // ],
                             [
                                 'image' => 'money-mouth-face.png',
                                 'text' => 'Ваша цель – высокооплачиваемая и интересная должность, но в резюме нет пункта «Свободный английский».'
@@ -99,7 +101,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                     <?php foreach($items as $item): ?>
                         <div class="media">
                             <div class="media-left">
-                                <img class="icon" src="./img/emoji/<?= $item['image'] ?>">
+                                <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
                             </div>
 
                             <div class="media-content">
@@ -117,7 +119,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                     <h2 class="title section-title">Что мы делаем не так, изучая язык:</h2>
 
                     <div class="columns">
-                        <div class="column">
+                        <div class="column is-8">
                             <div class="media-list">
                                 <?php
                                     $items = [
@@ -139,7 +141,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                                 <?php foreach($items as $item): ?>
                                     <div class="media">
                                         <div class="media-left">
-                                            <img class="icon" src="./img/emoji/<?= $item['image'] ?>">
+                                            <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
                                         </div>
 
                                         <div class="media-content">
@@ -149,17 +151,11 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                                 <?php endforeach; ?>
                             </div>
 
-                            <!-- <p><strong>Устаревшая методика.</strong> На уроке вас просят заполнять пропуски, «раскрывать скобочки», либо читать текст по очереди. Вы знаете теорию, но не можете применять ее на практике.</p> 
-
-                            <p><strong>Мало практики говорения.</strong> БОльшую часть урока вещает преподаватель. Вы опять не учитесь говорить.</p> 
-
-                            <p><strong>Потеря мотивации.</strong> Вы только учите и учите, но реальный результат не ощущаете. Если нет ощущения прогресса, то и желание учиться дальше исчезает.</p> -->
-
                             <p class="lead">Что же делать, чтобы наконец заговорить?</p>
                         </div>
 
-                        <div class="column">
-                            <img class="image" src="./img/confused-girl.jpg">
+                        <div class="column is-4">
+                            <img class="image" src="./img/confused-girl.png">
                         </div>
                     </div>
                 </div>
@@ -170,7 +166,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                     <div class="column background"></div>
 
                     <div class="column text">
-                        <h2 class="title section-title">Записывайтесь на бесплатный онлайн-урок в школу SAY YES! и вы узнаете:</h2>
+                        <h2 class="title section-title">Записывайтесь на бесплатный онлайн-урок и вы узнаете:</h2>
 
                         <div class="media-list">
                             <?php
@@ -184,10 +180,6 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                                         'text' => 'Каким образом мы гарантируем вам <strong>80% практики языка</strong> даже на онлайн-уроке в группе.'
                                     ],
                                     [
-                                        'image' => 'flag-for-united-states.png',
-                                        'text' => 'Как быстро <strong>разрушить языковой барьер</strong> и улучшить произношение.'
-                                    ],
-                                    [
                                         'image' => 'flexed-biceps.png',
                                         'text' => 'Как поддерживать мотивацию в изучении языка и наконец <strong>довести свой уровень до Intermediate</strong>.'
                                     ]
@@ -197,7 +189,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                             <?php foreach($items as $item): ?>
                                 <div class="media">
                                     <div class="media-left">
-                                        <img class="icon" src="./img/emoji/<?= $item['image'] ?>">
+                                        <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
                                     </div>
 
                                     <div class="media-content">
@@ -207,53 +199,87 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                             <?php endforeach; ?>
                         </div>
 
-                        <p class="lead has-text-centered">Вы побываете на пробном уроке в реальной группе, увидите, как занимаются наши студенты и познакомитесь с потенциальным преподавателем.</p>
+                        <div class="has-text-centered">
+                            <a href="#form" class="button is-danger is-medium call-to-action">Записаться на бесплатный урок</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="offer" class="section section-dark section-cta">
-                <h2 class="title">Запишитесь сейчас и получите инструкцию от коуча по произношению<br><span class="has-text-danger">«Как быстро начать понимать речь носителя»</span> в подарок!</h2>
+            <div class="zoom-image">
+                <img src="/img/zoom.jpg" alt="">
+            </div>
 
-                <a href="#form" class="button is-danger is-medium call-to-action">Записаться на урок</a>
+            <section id="reasons" class="section">
+                <div class="container">
+                    <h2 class="title section-title">Почему вам стоит выбрать обучение онлайн в группе?</h2>
+
+                    <div class="columns">
+                        <div class="column is-4">
+                            <img class="image" src="./img/happy-girl.png">
+                        </div>
+
+                        <div class="column is-8">
+                            <div class="media-list">
+                                <?php
+                                    $items = [
+                                        [
+                                            'image' => 'thumbs-up-sign.png',
+                                            'title' => 'Мини-группы – это эффективно и весело',
+                                            'description' => '- максимум внимания каждому<br>- дух соперничества, которого нет в индивидуальном<br>- практика языка с разными людьми и акцентами'
+                                        ],
+                                        [
+                                            'image' => 'thumbs-up-sign.png',
+                                            'title' => 'Дешевле, чем индивидуально',
+                                            'description' => 'Обучение в группе стоит в 2,5 раза дешевле индивидуального: 430 руб. против 1080 руб. за академ. час.'
+                                        ],
+                                        [
+                                            'image' => 'thumbs-up-sign.png',
+                                            'title' => 'Не тратишь время на дорогу',
+                                            'description' => 'Занимайтесь, где угодно, в комфорте дома или офиса. Все, что вам нужно – это компьютер и интернет!'
+                                        ]
+                                    ];
+                                ?>
+
+                                <?php foreach($items as $item): ?>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
+                                        </div>
+
+                                        <div class="media-content">
+                                            <h3><?= $item['title'] ?></h3>
+                                            <p><?= $item['description'] ?></p>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="lesson" class="section">
                 <div class="container">
-                    <h2 class="title section-title">Почему выбирают онлайн-обучение в SAY YES?</h2>
+                    <h2 class="title section-title">Что входит в онлайн обучение в SAY YES?</h2>
 
                     <div class="media-list">
                         <?php
                             $items = [
                                 [
                                     'image' => 'speaking-head-in-silhouette.png',
-                                    'primary' => 'Большой опыт работы',
-                                    'secondary' => 'Мы обучаем с 2013 года в школах в Москве и онлайн.'
+                                    'title' => 'Живые занятия',
+                                    'description' => 'Живые занятия в мини-группе 2 раза в неделю по 1,5 часа в ZOOM'
                                 ],
                                 [
                                     'image' => 'flag-for-united-kingdom.png',
-                                    'primary' => 'Мини-группы – это эффективно и весело',
-                                    'secondary' => 'В вашей группе будет не более 4-6 человек вашего уровня.'
+                                    'title' => 'Онлайн-платформа',
+                                    'description' => 'Самостоятельная работа на онлайн-платформе для закрепления пройденного на уроке'
                                 ],
                                 [
                                     'image' => 'information-desk-person.png',
-                                    'primary' => 'Профессиональные и харизматичные преподаватели',
-                                    'secondary' => 'Только 5% проходят отбор и допускаются к сотрудничеству с нами.'
-                                ],
-                                [
-                                    'image' => 'memo.png',
-                                    'primary' => 'Онлайн-платформа бесплатно',
-                                    'secondary' => 'Ваши прогресс, домашка, контроль знаний – на удобной онлайн платформе.'
-                                ],
-                                [
-                                    'image' => 'female-teacher.png',
-                                    'primary' => 'Разговорный клуб онлайн бесплатно',
-                                    'secondary' => 'Рушим барьеры студентов на встречах с носителями языка каждую неделю.'
-                                ],
-                                [
-                                    'image' => 'money-bag.png',
-                                    'primary' => 'Доступная стоимость',
-                                    'secondary' => 'В 2,5 раза дешевле, чем уроки с репетитором: 430 руб. за ак. час.'
+                                    'title' => 'Разговорный клуб',
+                                    'description' => 'Безлимитное БЕСПЛАТНОЕ посещение онлайн спикинг клуба с носителями языка'
                                 ]
                             ];
                         ?>
@@ -265,23 +291,29 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                                 </div>
 
                                 <div class="media-content">
-                                    <p><strong><?= $item['primary'] ?></strong></p>
-                                    <p><?= $item['secondary'] ?></p>
+                                    <h3><?= $item['title'] ?></h3>
+                                    <p><?= $item['description'] ?></p>
                                 </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
-            </section>
 
-            <section id="demo" class="section">
-                <h2 class="title">Вот так проходят наши онлайн занятия</h2>
+                <div class="has-text-centered">
+                    <p class="lead has-text-weight-bold">А еще ваш ждет наша неповторимая атмосфера групповых занятий!</p>
 
-                <p class="subtitle">Посмотрите короткие видео-нарезки об атмосфере на наших занятиях</p>
+                    <p class="lead">Посмотрите, как проходят наши уроки</p>
+                </div>
 
                 <div class="box video">
                     <iframe src="https://player.vimeo.com/video/414731269" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
                 </div>
+            </section>
+
+            <section class="section section-dark section-cta">
+                <h2 class="title">Запишитесь сейчас и получите инструкцию от коуча по произношению<br><strong>«Как быстро начать понимать речь носителя»</strong> в подарок!</h2>
+
+                <a href="#form" class="button is-danger is-medium call-to-action">Записаться на бесплатный урок</a>
             </section>
 
             <section id="about" class="section">
@@ -309,7 +341,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
                     <?php foreach ($items as $item): ?>
                         <div class="media">
-                            <img class="image" src="./img/emoji/<?= $item['image'] ?>">
+                            <img class="image" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
 
                             <div class="media-content">
                                 <p><?= $item['text'] ?></p>
@@ -348,7 +380,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
                     <?php foreach($items as $item): ?>
                         <div class="media">
-                            <img class="image" src="./img/emoji/<?= $item['image'] ?>">
+                            <img class="image" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
 
                             <div class="media-content">
                                 <p><?= $item['text'] ?></p>
@@ -356,14 +388,12 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                         </div>
                     <?php endforeach; ?>
                 </div>
-
-                <div class="has-text-centered">
-                    <a href="#form" class="button is-danger is-medium call-to-action">Записаться на урок</a>
-                </div>
             </section>
 
             <section id="teachers" class="section">
-                <h2 class="title">Посмотрите видео-приветствия наших преподавателей</h2>
+                <h2 class="title">Наши харизматичные преподаватели</h2>
+
+                <p class="subtitle">Посмотрите их видео-приветствия</p>
 
                 <div class="media-list">
                     <?php
@@ -504,7 +534,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
                                 <div class="field">
                                     <div class="control">
-                                        <button type="submit" class="button is-primary is-medium is-fullwidth">Оставить заявку</button>
+                                        <button type="submit" class="button is-danger is-medium is-fullwidth">Оставить заявку</button>
                                     </div>
                                 </div>
                             </form>
@@ -557,7 +587,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
                 <section class="modal-card-body">
                     <p class="lead">Осталось только получить подарок!</p>
-                    <img src="./img/emoji/wrapped-present.png">
+                    <img src="https://static.sayes.ru/images/emoji/wrapped-present.png">
                     <p>Чтобы получить подарок в WhatsApp, пройдите по ссылке и отправьте сообщение с текстом <strong>"хочу подарок"</strong>.</p>
                 </section>
 
