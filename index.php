@@ -586,14 +586,10 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 </header>
 
                 <section class="modal-card-body">
-                    <p class="lead">Осталось только получить подарок!</p>
-                    <img src="https://static.sayes.ru/images/emoji/wrapped-present.png">
-                    <p>Чтобы получить подарок в WhatsApp, пройдите по ссылке и отправьте сообщение с текстом <strong>"хочу подарок"</strong>.</p>
+                    <p class="lead">Мы перезвоним Вам в ближайшее время, а пока что предлагаем подписаться на наш паблик в <a href="https://www.instagram.com/sayyes2english">Instagram</a> и начать учить живой английский с нашими преподавателями!</p>
+                    
+                    <iframe src="https://www.instagram.com/p/Btga3-IAHWT/embed/captioned/?cr=1&amp;v=12&amp;wp=500&amp;rd=https%3A%2F%2Fsayes.ru&amp;rp=%2Fthank-you%2F#%7B%22ci%22%3A0%2C%22os%22%3A4979.500000001281%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no"></iframe>
                 </section>
-
-                <footer class="modal-card-foot">
-                    <a class="button is-danger" href="https://wa.me/79250916416?text=Хочу%20подарок">Получить подарок</a>
-                </footer>
             </div>
         </div>
 
