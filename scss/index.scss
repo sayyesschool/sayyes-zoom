@@ -648,13 +648,23 @@ $danger: #b92027 !default;
 }
 
 #dialog {
-    .modal-card-body {
-        text-align: center;
+    .modal-card {
+        height: 100%;
+    }
 
-        img {
-            margin: 1rem 0;
+    .modal-card-body {
+        iframe {
+            width: 100%;
+            height: 100%;
         }
     }
+    // .modal-card-body {
+    //     text-align: center;
+
+    //     img {
+    //         margin: 1rem 0;
+    //     }
+    // }
 }
 
 .section-dark {
