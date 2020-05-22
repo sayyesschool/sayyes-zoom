@@ -612,7 +612,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
                 ym(YANDEX_METRIKA_COUNTER, 'reachGoal', 'zayavka');
                 gtag('event', 'click', { event_category: 'zayavka' });
-                fbq('track', 'Lead');
+                fbq('track', 'Lead_zoom');
                 
                 crm.addStudyRequest({
                     type: 'Заявка на пробный урок',
