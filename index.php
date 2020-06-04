@@ -350,8 +350,22 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                     <?php endforeach; ?>
                 </div>
 
-                <div class="box">
-                    <img class="image" src="https://sayes.ru/wp-content/uploads/2019/12/Skype_Picture_2019_12_04T14_01_35_057Z-e1575469459492.jpeg">
+                <div class="slider">
+                    <?php
+                        $images = [
+                            'https://sayes.ru/wp-content/uploads/2019/12/Skype_Picture_2019_12_04T14_01_35_057Z.jpg',
+                            'https://sayes.ru/wp-content/uploads/2019/09/belorusskaya-3-e1591097397827.jpg',
+                            'https://sayes.ru/wp-content/uploads/2019/09/paveletskaya-3-e1591097341808.jpg',
+                            'https://sayes.ru/wp-content/uploads/2018/12/IMG_2468-e1591098167634.jpg',
+                            'https://sayes.ru/wp-content/uploads/2016/04/IMG_6221-e1591098356668.jpg'
+                        ];
+                    ?>
+
+                    <?php foreach ($images as $image): ?>
+                        <div class="box">
+                            <img class="image" src="<?= $image ?>">
+                        </div>
+                    <?php endforeach; ?>
                 </div>
 
                 <p class="lead has-text-centered">Четыре раза становились победителями Премии <strong>«Эксперт Года»</strong> рейтинга курсов Schoolrate:</p>
@@ -651,7 +665,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 return true;
             });
 
-            $('#gallery .carousel-inner').slick({
+            $('.slider').slick({
                 arrow: true,
                 prevArrow: '<a class="slick-arrow slick-arrow-prev"><span class="fa fa-angle-left custom-handle"></span></a>',
                 nextArrow: '<a class="slick-arrow slick-arrow-next"><span class="fa fa-angle-right custom-handle"></span></a>',
