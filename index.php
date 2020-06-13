@@ -1,10 +1,3 @@
-<?php
-$utm_source = isset($_GET['utm_source']) ? $_GET['utm_source'] : null;
-$utm_medium = isset($_GET['utm_medium']) ? $_GET['utm_medium'] : null;
-$utm_campaign = isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : null;
-$utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
-?>
-
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -508,23 +501,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                         </div>
 
                         <div class="column">
-                            <form method="post" action="request.php">
-                                <?php if (isset($utm_source)): ?>
-                                    <input type="hidden" name="utm_source" value="<?= $utm_source ?>">
-                                <?php endif; ?>
-
-                                <?php if (isset($utm_medium)): ?>
-                                    <input type="hidden" name="utm_medium" value="<?= $utm_medium ?>">
-                                <?php endif; ?>
-
-                                <?php if (isset($utm_campaign)): ?>
-                                    <input type="hidden" name="utm_campaign" value="<?= $utm_campaign ?>">
-                                <?php endif; ?>
-
-                                <?php if (isset($utm_content)): ?>
-                                    <input type="hidden" name="utm_content" value="<?= $utm_content ?>">
-                                <?php endif; ?>
-
+                            <form method="post" action="https://api.sayes.ru/request.php">
                                 <div class="field">
                                     <div class="control">
                                         <input class="input is-medium" type="text" name="name" placeholder="Имя" required>
@@ -624,28 +601,23 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
             document.querySelector('form').addEventListener('submit', function(event) {
                 event.preventDefault();
 
+                var data = {
+                    type: 'Заявка на пробный урок онлайн в группе',
+                    name: this.elements.name.value,
+                    phone: this.elements.phone.value
+                };
+
                 ym(YANDEX_METRIKA_COUNTER, 'reachGoal', 'zayavka');
                 gtag('event', 'click', { event_category: 'zayavka' });
                 fbq('track', 'Lead_zoom');
                 
-                crm.addStudyRequest({
-                    type: 'Заявка на пробный урок',
-                    name: this.elements.name.value,
-                    phone: this.elements.phone.value
-                });
+                crm.addStudyRequest(data);
                 
                 $.post({
-                    url: 'request.php',
-                    data: JSON.stringify({
-                        name: this.elements.name.value,
-                        phone: this.elements.phone.value,
-                        utm_source: this.elements.utm_source && this.elements.utm_source.value,
-                        utm_medium: this.elements.utm_medium && this.elements.utm_medium.value,
-                        utm_campaign: this.elements.utm_campaign && this.elements.utm_campaign.value,
-                        utm_content: this.elements.utm_content && this.elements.utm_content.value
-                    }),
-                    contentType: 'application/json'
-                }).done(function(data) {
+                    url: 'https://api.sayes.ru/request.php' + location.search,
+                    data: data,
+                    contentType: 'application/x-www-form-urlencoded'
+                }).done(function() {
                     dialogElement.classList.add('is-active');
                     formElement.reset();
                 });
@@ -691,6 +663,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
             new Timer(hours, minutes, seconds, function (timer) {
                 timerElement.textContent = timer.toString();
-            }).start();</script>
+            }).start();
+        </script>
     </body>
 </html>
