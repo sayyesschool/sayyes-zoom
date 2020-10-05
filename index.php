@@ -56,11 +56,11 @@
         </header>
 
         <main id="content">
-            <section id="present" class="section section-dark section-cta">
+            <!-- <section id="present" class="section section-dark section-cta">
                 <h2 class="title">Запишитесь сейчас и получите инструкцию от коуча по произношению<br><strong>«Как быстро начать понимать речь носителя»</strong> в подарок!</h2>
 
                 <img src="https://static.sayes.ru/images/emoji/wrapped-present.png" alt="">
-            </section>
+            </section> -->
 
             <section id="persona" class="section has-text-centered">
                 <h2 class="title">Узнаете себя?</h2>
@@ -303,11 +303,11 @@
                 </div>
             </section>
 
-            <section class="section section-dark section-cta">
+            <!-- <section class="section section-dark section-cta">
                 <h2 class="title">Запишитесь сейчас и получите инструкцию от коуча по произношению<br><strong>«Как быстро начать понимать речь носителя»</strong> в подарок!</h2>
 
                 <a href="#form" class="button is-danger is-medium call-to-action">Записаться на бесплатный урок</a>
-            </section>
+            </section> -->
 
             <section id="about" class="section">
                 <h2 class="title">Кто мы?</h2>
@@ -532,13 +532,13 @@
                         </div>
                     </div>
 
-                    <p class="lead has-text-centered">Оставьте заявку до конца дня <?= date("d.m") ?>, и вы получите инструкцию от коуча по произношению<br><span class="has-text-danger has-text-weight-bold">«Как быстро начать понимать речь носителя»</span><br>в подарок!</p>
+                    <!-- <p class="lead has-text-centered">Оставьте заявку до конца дня <?= date("d.m") ?>, и вы получите инструкцию от коуча по произношению<br><span class="has-text-danger has-text-weight-bold">«Как быстро начать понимать речь носителя»</span><br>в подарок!</p>
 
                     <div id="timer" class="has-text-centered">
                         <p>До конца акции осталось</p>
 
                         <span class="tag is-large is-rounded is-danger"></span>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </main>
