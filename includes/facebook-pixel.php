@@ -10,10 +10,12 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '758563291240040');
   fbq('init', '354901769006910');
+  fbq('init', '1060189581084918');
   fbq('track', 'PageView');
 </script>
 <noscript>
   <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=758563291240040&ev=PageView&noscript=1" />
   <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=354901769006910&ev=PageView&noscript=1" />
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1060189581084918&ev=PageView&noscript=1" />
 </noscript>
 <!-- End Facebook Pixel -->
