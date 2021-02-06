@@ -19,7 +19,7 @@
             include './includes/yandex-metrika.php';
             include './includes/google-analytics.php';
             include './includes/facebook-pixel.php';
-            include './includes/roistat.php';
+            //include './includes/roistat.php';
         ?>
     </head>
 
@@ -648,22 +648,22 @@
                 dialogElement.classList.remove('is-active');
             });
 
-            var timerElement = document.querySelector('#timer .tag');
+            // var timerElement = document.querySelector('#timer .tag');
 
-            var now = new Date();
-            var end = new Date();
+            // var now = new Date();
+            // var end = new Date();
 
-            end.setHours(23);
-            end.setMinutes(59);
-            end.setSeconds(59);
+            // end.setHours(23);
+            // end.setMinutes(59);
+            // end.setSeconds(59);
 
-            var hours = end.getHours() - now.getHours();
-            var minutes = end.getMinutes() - now.getMinutes();
-            var seconds = end.getSeconds() - now.getSeconds();
+            // var hours = end.getHours() - now.getHours();
+            // var minutes = end.getMinutes() - now.getMinutes();
+            // var seconds = end.getSeconds() - now.getSeconds();
 
-            new Timer(hours, minutes, seconds, function (timer) {
-                timerElement.textContent = timer.toString();
-            }).start();
+            // new Timer(hours, minutes, seconds, function (timer) {
+            //     timerElement.textContent = timer.toString();
+            // }).start();
         </script>
     </body>
 </html>
