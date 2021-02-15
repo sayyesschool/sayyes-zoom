@@ -596,7 +596,7 @@
             var formElement = document.querySelector('#signup form');
             var dialogElement = document.querySelector('#dialog');
             
-            $('input[type=tel]').mask('+9 (999) 999-9999');
+            //$('input[type=tel]').mask('+7 (999) 999-9999');
 
             document.querySelector('form').addEventListener('submit', function(event) {
                 event.preventDefault();
