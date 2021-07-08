@@ -54,16 +54,14 @@ document.querySelectorAll('form').forEach(function(form) {
         }
 
         var data = {
-            type: 'Заявка на пробный урок по скайп акция лето',
-            name: name,
-            phone: phone,
+            type: 'Заявка на пробный урок онлайн в группе',
+            name: this.elements.name.value,
+            phone: this.elements.phone.value
         };
 
-        ym(YANDEX_METRIKA_COUNTER, 'reachGoal', 'lead');
-        gtag('event', 'lead', {
-            event_category: 'form'
-        });
-        fbq('track', 'Lead_skype');
+        ym(YANDEX_METRIKA_COUNTER, 'reachGoal', 'zayavka');
+        gtag('event', 'click', { event_category: 'zayavka' });
+        fbq('track', 'Lead_zoom');
 
         crm.addStudyRequest(data);
 
