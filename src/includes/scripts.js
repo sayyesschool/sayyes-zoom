@@ -55,8 +55,8 @@ document.querySelectorAll('form').forEach(function(form) {
 
         var data = {
             type: 'Заявка на пробный урок онлайн в группе',
-            name: this.elements.name.value,
-            phone: this.elements.phone.value
+            name: name,
+            phone: phone
         };
 
         ym(YANDEX_METRIKA_COUNTER, 'reachGoal', 'zayavka');
