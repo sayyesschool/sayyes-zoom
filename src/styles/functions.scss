@@ -1,0 +1,3 @@
+@function get-image-url($name) {
+    @return url('https://static.sayes.ru/images/#{$name}');
+}

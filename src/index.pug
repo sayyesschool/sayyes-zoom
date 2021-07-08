@@ -1,0 +1,435 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Хочешь заговорить на английском, записывайся на пробный урок в сеть школ английского SAY&nbsp;YES!")
+        meta(name="yandex-verification" content="77618a975ea21450")
+        meta(name="msapplication-TileImage" content="https://sayes.ru/wp-content/uploads/2018/09/cropped-favicon-270x270.png")
+
+        title Бесплатный пробный урок английского в онлайн группе | SAY YES!
+
+        link(rel="icon" href="https://sayes.ru/wp-content/uploads/2018/09/cropped-favicon-32x32.png" sizes="32x32")
+        link(rel="icon" href="https://sayes.ru/wp-content/uploads/2018/09/cropped-favicon-192x192.png" sizes="192x192")
+        link(rel="apple-touch-icon" href="https://sayes.ru/wp-content/uploads/2018/09/cropped-favicon-180x180.png")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css")
+        link(rel="stylesheet" href="./index.css")
+
+        if ENV === 'prod'
+            include ./includes/facebook-pixel
+            include ./includes/google-analytics
+            include ./includes/yandex-metrika
+
+    body.page
+        header.header
+            div.navbar
+                div.navbar-left
+                    div.navbar-item.has-logo
+                        img(src=get_image('logo.svg') alt="")
+
+                    div.navbar-item.has-expert
+                        img(src=get_image('expert.svg') alt="")
+
+                div.navbar-right
+                    div.navbar-item.has-tel
+                        a.link.tel-link(href=get_tel_for_href(data.info.tel) target="_blank")= data.info.tel
+
+                        button.button.call-button.modal-button Перезвоните мне
+
+                    div.navbar-item.has-social
+                        ul.list.icons-list
+                            li: a.icon-button.whatsapp-button(href=data.info.whatsapp target="_blank")
+                            li: a.icon-button.facebook-button(href=data.info.facebook target="_blank")
+                            li: a.icon-button.instagram-button(href=data.info.instagram target="_blank")
+
+            div.container
+                div#hero
+                    h1 Английский в мини-группах онлайн<br>от <strong>4200 руб. в месяц</strong>
+
+                    p Выучи английский в кругу друзей за 6 месяцев!
+
+                    button.button.action-button.modal-button Записаться на бесплатный урок
+
+        section#form1.section.form-section
+            div.container
+                h2.section-title Узнайте свой уровень английского на пробном онлайн уроке, а также
+
+                ul.list
+                    for item, index in ['Познакомьтесь с методикой и программой обучения', 'Получите план изучения языка для достижения вашей цели', 'Оцените, нравится ли вам преподаватель']
+                        li
+                            span.circle= index + 1
+                            span= item
+
+                p.lead Запишитесь на пробный урок и получите скидку на обучение 20%!
+
+                form
+                    input.text-field(type="text" placeholder="Имя" name="name" required)
+
+                    input.text-field(type="tel" placeholder="Телефон" name="phone" required)  
+
+                    button.button.action-button.form-button(type="submit") Записаться на пробный урок
+
+        section#persona.section
+            div.container
+                h2.section-title Узнаете себя?
+
+                ul.list.media-list
+                    for item in data.persona
+                        li.media-list-item
+                            div.media-list-item__graphic
+                                img(src=get_image(`emoji/${item.image}`))
+                            
+                            div.media-list-item__main
+                                p.media-list-item__text= item.text
+
+                p.lead Почему же мы учим язык годами, но так и не говорим свободно?
+
+        section#problem.section
+            div.container
+                h2.section-title Что мы делаем не так, изучая язык:
+
+                div.section-content
+                    ul.list.media-list
+                        for problem in data.problems
+                            li.media-list-item
+                                div.media-list-item__graphic
+                                    img(src=get_image(`emoji/${problem.image}`))
+
+                                div.media-list-item__main
+                                    p.media-list-item__text!= problem.text
+
+                    p.lead Что же делать, чтобы наконец заговорить?
+
+        section#solution.section
+            div.container
+                div.image
+
+                div.section-content
+                    h2.section-title Записывайтесь на пробный урок онлайн и вы:
+
+                    ul.list.media-list
+                        for solution in data.solutions
+                            li.media-list-item
+                                div.media-list-item__graphic
+                                    img(src=get_image(`emoji/${solution.image}`))
+
+                                div.media-list-item__main
+                                    p.media-list-item__text!= solution.text
+
+                    button.button.action-button.modal-button Оставить заявку и получить подарок
+
+        section#reasons1.section
+            div.container
+                h2.section-title Почему вам стоит выбрать обучение индивидуально онлайн?
+
+                div.section-content
+                    ul.list.media-list
+                        for reason in data.reasons1
+                            li.media-list-item
+                                div.media-list-item__graphic
+                                    img(src=get_image(`emoji/${reason.image}`))
+
+                                div.media-list-item__main
+                                    h3.media-list-item__heading= reason.title
+                                    p.media-list-item__text!= reason.description
+
+        section#reasons2.section
+            div.container
+                h2.section-title Почему вы начнете разговаривать на английском и достигните своей цели, обучаясь в SAY&nbsp;YES?
+
+                ul.list.media-list
+                    for item, index in data.reasons2
+                        li.media-list-item
+                            div.media-list-item__graphic
+                                img(src=get_image(`emoji/${item.image}`) alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                            div.media-list-item__main
+                                h3.media-list-item__heading= item.title
+                                p.media-list-item__text= item.description
+
+                                if item.links
+                                    for link in item.links
+                                        a.link.scroll-to(href=link.href)= link.text
+
+        section#teachers.section
+            div.container
+                div.section-overline Правильный выбор преподавателя - залог успеха
+
+                h2.section-title В нашей команде только сильные преподаватели
+
+                ul.list.requirements-list
+                    li Строгий кастинг: отбор <br>проходит только 1 из <br>50 преподавателей
+
+                    li Обеспечиваем входной тренинг по методике школы и по обучению онлайн для каждого
+
+                    li Регулярно собираем отзывы <br>и контролируем результат и качество обучения
+
+                div.slider.teacher-slider
+                    div.swiper-container
+                        div.swiper-wrapper
+                            for teacher, index in data.teachers
+                                div.slide.swiper-slide(id=`teacher-${index}`)
+                                    div.teacher-details
+                                        div.teacher-details__photo
+                                            a.video-link(href=teacher.video target="_blank" data-fancybox data-width="640" data-height="360")
+                                                img.image.teacher-image(src=get_image(`teachers/${teacher.photo}`) alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                                        div.teacher-details__text
+                                            h3.teacher-name= teacher.name
+                                            p.teacher-bio= teacher.text
+                                            ul.list.teacher-feature-list
+                                                for feature in teacher.features
+                                                    li= feature
+
+                    div.slider-button.slider-button-prev.swiper-button-prev
+                    div.slider-button.slider-button-next.swiper-button-next
+
+        section#advantages.section
+            div.container
+                div.section-overline Эффективность нашего обучения подтверждена отзывами и наградами
+
+                h2.section-title Школа <span class="nbsp">SAY YES!</span> существует 8 лет в оффлайн формате в Москве и 4 раза становилась победителем премии «Эксперт&nbsp;Года» от SchoolRate
+
+                div.section-content
+                    div
+                        ul.list.media-list
+                            for item, index in data.advantages
+                                li.media-list-item
+                                    div.media-list-item__graphic
+                                        img.image(src=get_image('emoji/trophy.png') width="64" height="64" alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+                                    
+                                    div.media-list-item__main
+                                        h3.media-list-item__heading!= item[0]
+                                        p.media-list-item__text!= item[1]
+
+                        button.button.action-button.modal-button Оставить заявку и получить подарок
+
+                    figure.license
+                        img.image(src=get_image('license.png') alt="" aria-hidden="true" aria-role="presentation" draggable="false" width="207" height="294")
+
+                        figcaption.dialog Качество обучения подтверждено лицензией Министерства образования
+
+        section#reviews.section
+            div.container
+                h2.section-title За 8 лет работы обучили 4.5 тысяч студентов и получили более 300 отзывов
+
+                div.slider.portal-testimonials-slider
+                    div.swiper-container
+                        div.swiper-wrapper
+                            for item in data.portalTestimonials
+                                div.slide.swiper-slide
+                                    h3.heading.semibold= item.name
+
+                                    img.image(src=get_image(item.image) alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                                    a.link(href=item.link.href target="_blank")= item.link.text
+
+                    div.slider-button.slider-button-prev.swiper-button-prev
+                    div.slider-button.slider-button-next.swiper-button-next
+
+                div.slider.people-testimonials-slider
+                    div.swiper-container
+                        div.swiper-wrapper
+                            for item in data.peopleTestimonials
+                                div.slide.swiper-slide
+                                    div.testimonial-item
+                                        div.testimonial-details
+                                            div.testimonial-photo
+                                                img.image(src=get_image(`students/${item.photo}`) alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                                            div.testimonial-meta
+                                                h3.testimonial-name= item.header
+
+                                                p.testimonial-description= item.subheader
+
+                                                a.testimonial-link(href=item.profile target="_blank") Профиль в
+                                                    span(class=`${item.profile.includes('facebook') ? 'facebook' : 'instagram'}-icon`)
+
+                                        div.testimonial-text.dialog
+                                            p= item.text
+                                            span.text-show Развернуть
+
+                                        a.video-link(href=item.video_link target="_blank" data-fancybox data-width="640" data-height="360")
+                                            img.image(src=item.video_preview alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                    div.slider-button.slider-button-prev.swiper-button-prev
+                    div.slider-button.slider-button-next.swiper-button-next
+
+        section#progress.section
+            div.container
+                div.column
+                    h2.section-title Мы уверены в вашем результате и записываем его на видео 
+
+                    p.section-description Посмотрите не просто отзывы наших студентов, а то, как они говорят на английском
+
+                div.column
+                    a.video-link(href="https://youtu.be/AuVJ502zIzM" target="_blank" data-fancybox data-width="640" data-height="360")
+                        img.image(src=get_youtube_image('AuVJ502zIzM') alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+        section#prices.section
+            div.container
+                h2.section-title Стоимость обучения в онлайн группе
+
+                p.section-subtitle Вы можете приобрести 1, 3 или 6 месяцев обучения
+
+                ul.list
+                    li.price-card
+                        div.price-card-header 1 месяц
+                        div.price-card-price
+                            del 8000
+                            | 6400 ₽/мес.
+                        button.button.action-button.modal-button Узнать подробнее
+
+                    li.price-card
+                        div.price-card-header 3 месяца
+                        div.price-card-price
+                            del 6500
+                            | 5200 ₽/мес.
+                        button.button.action-button.modal-button Узнать подробнее
+
+                    li.price-card
+                        div.price-card-header 6 месяцев
+                        div.price-card-price
+                            del 5200
+                            | 4200 ₽/мес.
+                        button.button.action-button.modal-button Узнать подробнее
+
+        section#questions.section
+            div.container
+                img.image.section-image(src=get_image('employees/vera-shatalova.jpg') alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                div.section-content
+                    h2.section-title На часто задаваемые вопросы отвечает Вера&nbsp;Шаталова,<br>руководитель школы SAY&nbsp;YES!
+
+                    img.image.section-mobile-image(src=get_image('employees/vera-shatalova.jpg') alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                    ul.list.accordion
+                        for question in data.questions
+                            li.accordion-item
+                                div.accordion-item__header
+                                    p= question.header
+
+                                div.accordion-item__content
+                                    p!= question.text
+
+        section#form2.section.form-section
+            div.container
+                h2.section-title Узнайте свой уровень английского на пробном онлайн уроке, а также
+
+                ul.list
+                    for item, index in ['Познакомьтесь с методикой и программой обучения', 'Получите план изучения языка для достижения вашей цели', 'Оцените, нравится ли вам преподаватель']
+                        li
+                            span.circle= index + 1
+                            span= item
+
+                p.lead Запишитесь на пробный урок и получите скидку на обучение 20%!
+
+                form
+                    input.text-field(type="text" placeholder="Имя" name="name" required)
+
+                    input.text-field(type="tel" placeholder="Телефон" name="phone" required)  
+
+                    button.button.action-button.form-button(type="submit") Записаться на пробный урок
+
+        section#contact.section
+            div.container
+                h2.section-title Контакты
+
+                div.row
+                    div.column.column-left
+                        p.section-description Если вы хотите узнать больше о нашей школе, просто позвоните нам!
+
+                        ul.list.contact-list
+                            li: a.tel-link(href=get_tel_for_href(data.info.tel) target="_blank")= data.info.tel
+
+                            li: a.whatsapp-link(href=data.info.whatsapp target="_blank") Написать в WhatsApp
+                    
+                    div.column.column-right
+                        ul.list.contact-phones
+                            li
+                                img.image.phone-image(src=get_image('phones/phone-1.png') alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                                a.subscription-social.subscription-social_inst.instagram-button(href=data.info.instagram target="_blank") Подписаться на Instagram
+
+                            li
+                                img.image.phone-image(src=get_image('phones/phone-2.png') alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                                a.subscription-social.subscription-social_facebook.facebook-button(href=data.info.facebook target="_blank") Подписаться в Facebook
+
+        footer.footer.section
+            div.container
+                div.footer__top
+                    div.footer__column
+                        img.image.logo-image(src=get_image('logo.svg') alt="" aria-hidden="true" aria-role="presentation" draggable="false")
+
+                        ul.list.contact-list
+                            li: a.link.email-link(href=get_email_for_href(data.info.email) target="_blank")= data.info.email
+
+                            li: a.link.whatsapp-link(href=data.info.whatsapp target="_blank") Написать в WhatsApp
+
+                            for address in data.info.addresses
+                                li: span.address-info= address
+
+                    for section in data.footerSections
+                        div.footer__column
+                            div.footer-section
+                                h3.semibold= section.heading
+
+                                ul.list
+                                    for link in section.links
+                                        li: a.link(href=link.href target="_blank")= link.text
+
+                div.footer__bottom
+                    a.link.licence-link(href="#"): small Лицензия ДО Правительства Москвы №036801
+
+                    small.copyright © 2013 - 2021 SAY&nbsp;YES!
+
+                    ul.list
+                        li: a.link.privacy-link(href=data.info.policyLink target="_blank"): small Политика конфиденциальности
+
+                        li: a.link.offer-link(href=data.info.offerLink target="_blank"): small Договор-оферта
+
+        div#request-modal.modal
+            div.modal-overlay
+
+            div.modal-surface
+                button.modal-close-button
+
+                div.modal-content
+                    h3.modal-title Оставьте заявку на пробный урок
+                    
+                    p.modal-text и получите скидку 20%!
+
+                    form.request-form
+                        input.text-field(type="text" placeholder="Имя" name="name" required)
+
+                        input.text-field(type="tel" placeholder="Телефон" name="phone" required)
+
+                        button.button.action-button.form-button(type="submit") Оставить заявку
+
+                        div.check-privacy Я согласен на обработку моих персональных данных
+
+        div#success-modal.modal
+            div.modal-overlay
+
+            div.modal-surface
+                button.modal-close-button
+
+                div.modal-content
+                    h2.modal-title Спасибо, что записались!
+
+                    p.modal-text Мы перезвоним вам в ближайшее время и пригласим на пробное занятие!
+
+        script(src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js")
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+        script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
+
+        script(src="https://static.sayes.ru/js/crm.js")
+        script(src="https://static.sayes.ru/js/masked-input.js")
+
+        script
+            include ./includes/scripts.js

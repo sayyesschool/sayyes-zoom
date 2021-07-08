@@ -1,0 +1,31 @@
+@mixin breakpoint($point) {
+    $breakpoint: map-get($breakpoints, $point);
+
+    @if not $breakpoint {
+        @error 'Invalid breakpoint';
+    } @else {
+        @media #{$breakpoint} {
+            @content;
+        }
+    }
+}
+
+@mixin background($image: none, $color: none) {
+    background: get-image-url($image), $color;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @content;
+}
+
+@mixin button-icon($image) {
+    &:before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-image: get-image-url($image);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 4px;
+    }
+}

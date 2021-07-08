@@ -1,0 +1,37 @@
+$static-url: 'https://static.sayes.ru';
+
+/* Font */
+
+$font-family: 'Nunito', sans-serif;
+$font-size: 16px;
+$font-weight: 400;
+$line-height: 24px;
+
+/* Colors */
+
+$primary-color: #5a1294;
+$secondary-color: #ffe947;
+$body-background-color: #f2f2f2;
+$heading-color: #212121;
+$text-color: #24292e;
+$text-light-color: #ffffff;
+$text-dark-color: #424242;
+
+/* Breakpoints */
+
+$sm: 600px;
+$md: 840px;
+$lg: 1440px;
+
+$breakpoints: (
+    sm: '(max-width: #{$sm - 1})',
+    gt-sm: '(min-width: #{$sm})',
+
+    lt-md: '(max-width: #{$sm - 1})',
+    md: '(min-width: #{$sm}) and (max-width: #{$md - 1})',
+    gt-md: '(min-width: #{$md})',
+
+    lt-lg: '(max-width: #{$md - 1})',
+    lg: '(min-width: #{$md}) and (max-width: #{$lg - 1})',
+    gt-lg: '(min-width: #{$lg})'
+);
