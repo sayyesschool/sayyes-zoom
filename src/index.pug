@@ -46,17 +46,19 @@ html(lang="ru")
                             li: a.icon-button.facebook-button(href=data.info.facebook target="_blank")
                             li: a.icon-button.instagram-button(href=data.info.instagram target="_blank")
 
-            div.container
-                div#hero
-                    h1 Английский в мини-группах онлайн<br>от <strong>4200 руб. в месяц</strong>
+            div#hero
+                div.container
+                    h1 Английский в мини-группах онлайн от <strong>4200 руб. в месяц</strong>
 
                     p Выучи английский в кругу друзей за 6 месяцев!
 
                     button.button.action-button.modal-button Записаться на бесплатный урок
 
+                    img.image(src="./images/hero.jpg" alt="")
+
         section#form1.section.form-section
             div.container
-                h2.section-title Узнайте свой уровень английского на пробном онлайн уроке, а также
+                h2.section-title Узнайте свой уровень английского на бесплатном пробном онлайн уроке, а также
 
                 ul.list
                     for item, index in ['Познакомьтесь с методикой и программой обучения', 'Получите план изучения языка для достижения вашей цели', 'Оцените, нравится ли вам преподаватель']
@@ -71,7 +73,7 @@ html(lang="ru")
 
                     input.text-field(type="tel" placeholder="Телефон" name="phone" required)  
 
-                    button.button.action-button.form-button(type="submit") Записаться на пробный урок
+                    button.button.action-button.form-button(type="submit") Записаться на <span>&nbsp;бесплатный&nbsp;</span> пробный урок
 
         section#persona.section
             div.container
@@ -90,7 +92,7 @@ html(lang="ru")
 
         section#problem.section
             div.container
-                h2.section-title Что мы делаем не так, изучая язык:
+                h2.section-title Почему же мы учим язык годами, но так и не говорим свободно?
 
                 div.section-content
                     ul.list.media-list
@@ -164,7 +166,7 @@ html(lang="ru")
                 ul.list.requirements-list
                     li Строгий кастинг: отбор <br>проходит только 1 из <br>50 преподавателей
 
-                    li Обеспечиваем входной тренинг по методике школы и по обучению онлайн для каждого
+                    li Обеспечиваем входной тренинг по методике школы и по обучению онлайн
 
                     li Регулярно собираем отзывы <br>и контролируем результат и качество обучения
 
@@ -318,7 +320,7 @@ html(lang="ru")
 
         section#form2.section.form-section
             div.container
-                h2.section-title Узнайте свой уровень английского на пробном онлайн уроке, а также
+                h2.section-title Узнайте свой уровень английского на бесплатном пробном онлайн уроке, а также
 
                 ul.list
                     for item, index in ['Познакомьтесь с методикой и программой обучения', 'Получите план изучения языка для достижения вашей цели', 'Оцените, нравится ли вам преподаватель']
@@ -326,14 +328,14 @@ html(lang="ru")
                             span.circle= index + 1
                             span= item
 
-                p.lead Запишитесь на пробный урок и получите скидку на обучение 20%!
+                p.lead Запишитесь на пробный урок и получите <span class="nbsp">ДВЕ НЕДЕЛИ обучения</span> В ПОДАРОК!
 
                 form
                     input.text-field(type="text" placeholder="Имя" name="name" required)
 
                     input.text-field(type="tel" placeholder="Телефон" name="phone" required)  
 
-                    button.button.action-button.form-button(type="submit") Записаться на пробный урок
+                    button.button.action-button.form-button(type="submit") Записаться на <span>&nbsp;бесплатный&nbsp;</span> пробный урок
 
         section#contact.section
             div.container

@@ -11,10 +11,15 @@
 }
 
 @mixin background($image: none, $color: none) {
-    background: get-image-url($image), $color;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @if $image != none {
+        background: get-image-url($image), $color;
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    } @else {
+        background: $color;
+    }
+    
     @content;
 }
 

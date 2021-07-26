@@ -144,6 +144,10 @@ p {
         font-size: 14px;
         height: 44px;
         padding: 0 24px;
+
+        span {
+            display: none;
+        }
     }
 }
 
